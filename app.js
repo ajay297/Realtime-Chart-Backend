@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 const axios = require('axios');
+const PORT = process.env.PORT || 5000;
 
 const index = require('./routes/index');
 const test = require('./routes/test');
@@ -43,4 +44,4 @@ const getApiAndEmit = async socket => {
     }, 1000)
 };
 
-server.listen(5000, () => console.log('Server running at port 5000'));
+server.listen(PORT, () => console.log(`Server running at port ${PORT}`));
