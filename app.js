@@ -25,10 +25,10 @@ io.on("connection", socket => {
 const getApiAndEmit = async socket => {
     try {
         const res = await axios.get(
-            "https://rest.coinapi.io/v1/exchangerate/ETH/USD?apikey=D64C7D04-BBE9-4008-BED0-FE5ABAFEFCB5"
+            "https://rest.coinapi.io/v1/exchangerate/ETH/USD?apikey=E68E11BC-E762-4D1D-8DF2-B775A2D0CB3E"
         ); // Getting the data from DarkSky
         const res1 = await axios.get(
-            "https://rest.coinapi.io/v1/exchangerate/BTC/USD?apikey=D64C7D04-BBE9-4008-BED0-FE5ABAFEFCB5"
+            "https://rest.coinapi.io/v1/exchangerate/BTC/USD?apikey=E68E11BC-E762-4D1D-8DF2-B775A2D0CB3E"
         );
         console.log(res.data);
         const data = { name: '', doge: res.data["rate"], btc: res1.data["rate"] };
